@@ -21,6 +21,7 @@
 	padding: 20px;
 	margin-top: 10px;
 	width: 100%;
+	border-radius: 10px;
 }
 
 .center{
@@ -38,6 +39,20 @@
 	background-color: #5FF200;
 	padding: 5.5px;
 	transition: 0.1s all;
+}
+.control{
+	border: 1px solid #03a9f4;
+	padding: 5px;
+	box-shadow: 5px;
+	border-radius: 5px;
+	 pointer-events: none;
+	 background-color: #ddd;
+}
+.control_f{
+	border: 1px solid #03a9f4;
+	padding: 5px;
+	box-shadow: 5px;
+	border-radius: 5px;
 }
 .arrow_down{
 

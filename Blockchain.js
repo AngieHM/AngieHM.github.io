@@ -101,7 +101,7 @@ function addUser(){
 	const markup = `
 	 	<div class="card card-signup" style="width: 100%;">
 		<div class="input-group">
-		<input type="text" class="form-control" placeholder="data">
+		<input type="text" class="control" placeholder="data">
 		</div>
 		<div class="hash" style="display: inline-flex;"><p>Hash : </p><p>dc75a315c77a1f9c98fb6247d03dd18ac52632d7dc6a9920261d8109b37cf00</p></div>
 		<div></div>
@@ -111,7 +111,7 @@ function addUser(){
 						
 		<div class="input-group">
 			
-		<input type="text" id="input_data${number}" class="form-control" placeholder="Add data">
+		<input type="text" id="input_data${number}" class="control_f" placeholder="Add data">
 		</div>
 		<div class="footer text-center">
 		<button id = "${number}"class="btn btn-danger" onclick="isClicked()" style="background: linear-gradient(45deg,#d4145a,#fbb03b); padding: 20px; padding-left: 20px; padding-right: 20px; border-radius: 15px;">Add data</button>
