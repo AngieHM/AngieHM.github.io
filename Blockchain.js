@@ -85,7 +85,7 @@ function addUser(){
 	var aElement = document.createElement("a");
 	var number = display.getTabNumber();
 	var createAText = document.createTextNode("User"+number.toString());
-	button_markup.setAttribute('onclick',"synchChain()");
+	button_markup.setAttribute('onclick',"synchChain(event)");
 	button_markup.className = "connect";
 	button_markup.setAttribute('id', "connect"+number.toString());
 	aElement.setAttribute('href', '#'+number.toString());
@@ -114,7 +114,7 @@ function addUser(){
 		<input type="text" id="input_data${number}" class="control_f" placeholder="Add data">
 		</div>
 		<div class="footer text-center">
-		<button id = "${number}"class="btn btn-danger" onclick="isClicked()" style="background: linear-gradient(45deg,#d4145a,#fbb03b); padding: 20px; padding-left: 20px; padding-right: 20px; border-radius: 15px;">Add data</button>
+		<button id = "${number}"class="btn btn-danger" onclick="isClicked(event)" style="background: linear-gradient(45deg,#d4145a,#fbb03b); padding: 20px; padding-left: 20px; padding-right: 20px; border-radius: 15px;">Add data</button>
 		</div>
 		</div>
 		`;
