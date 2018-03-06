@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
+
+
+}
+
+body{
+	
+	background: rgb(1,5,26);
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-70deg);
+  }
+}
+
+@keyframes reverseRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(70deg);
+  }
+}
+.transform1{
+
+	animation-duration: 60s;
+  	animation-name: rotate;
+  	animation-iteration-count: infinite;
+}
+.transform2{
+
+	animation-duration: 50s;
+  	animation-name: rotate;
+  	animation-iteration-count: infinite;
+}
+
+.transform3{
+
+	animation-duration: 40s;
+  	animation-name: rotate;
+  	animation-iteration-count: infinite;
+}
+
+.transform4{
+
+	animation-duration: 30s;
+  	animation-name: rotate;
+  	animation-iteration-count: infinite;
+  	animation-timing-function: linear;
+}
+.transform5{
+
+	animation-duration: 60s;
+  	animation-name: rotate;
+  	animation-iteration-count: infinite;
+}
+
+.transform6{
+
+	animation-duration: 80s;
+  	animation-name: reverseRotate;
+  	animation-iteration-count: infinite;
+}
+.transform7{
+
+	animation-duration: 60s;
+  	animation-name: reverseRotate;
+  	animation-iteration-count: infinite;
+}
+.intro__boxes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    perspective: 500px;
+
+}
+.click{
+
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+    left: 25%;
+    width: 50%;
+    margin: 0 auto;
+    vertical-align: middle;
+    text-align: center;
+    visibility: hidden;
+	opacity: 0;
+	transition: visibility 0s, opacity 0.5s linear;
+}
+
+
+.click p{
+	font-size: 50px;
+	font-weight: 40px;
+	text-align: center;
+	
+
+}
+
+.more {
+  color: #fff;
+  background: transparent;
+  padding: 16px 20px;
+  margin: 25px;
+  border: 2px solid #fff;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: inset 0 0 0 0 #fff;
+  -webkit-transition: all ease 0.8s;
+  -moz-transition: all ease 0.8s;
+  transition: all ease 0.8s;
+}
+.more:hover {
+    box-shadow: inset 100px 0 0 0 #fff;
+    color: #000;
+}
+.click_visible{
+	visibility: visible;
+	opacity: 1;
+}

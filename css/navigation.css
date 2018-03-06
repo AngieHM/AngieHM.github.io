@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+	font-family: 'Quicksand', sans-serif;
+	color:rgb(1,5,26);
+}
+a{
+	color:rgb(1,5,26);
+	font-weight: bold;
+}
+h1{
+	font-size: 50px;
+	vertical-align: center;
+	color: rgb(1,5,26);
+}
+
+@keyframes dash {
+
+
+  from {
+    stroke-dashoffset: 1981;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.container{
+
+	width: 80%;
+	margin: 0 auto;
+}
+
+.col-md-9{
+
+	margin: 0 auto;
+
+	padding: 20%;
+	position: relative;
+}
+.project, .path, .project-image{
+
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  margin-left: 15%;
+}
+.project, .path{
+
+  width: 35%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  margin-left: 15%;
+}
+.project{
+  background-color: transparent;
+  display:flex;
+ align-items: center;
+ justify-content: center;
+ margin: 2px;
+}
+.col-md-9 .path{
+  left: auto;
+}
+.project-image{
+	background: url('../images/project1.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	margin-left: 30%;
+	overflow: hidden;
+}
+
+.core--landing #pagination {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 3;
+}
+.container ul {
+
+	list-style-type: none;
+	display: inline-block;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 20em)
+.list--pagination__element {
+    display: block;
+    margin-top: 1.25em;
+}
+.list--pagination__element {
+    font-family: avenirnext-demibold,Helvetica,sans-serif;
+    color: #02010a;
+    margin: 0;
+    padding: 0 1.25em;
+    display: inline-block;
+    cursor: pointer;
+}
+.row li {
+    font-family: avenirnext-demibold,Helvetica,sans-serif;
+    color: #02010a;
+    margin: 0;
+    padding: 0 1.25em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.row {
+ margin: 10%;
+ padding: 20;
+}
+.row ul {
+ margin: auto;
+
+}
+.row li a{
+    font-weight: 600;
+    line-height: 1;
+    font-size: .875em;
+    letter-spacing: .1875em;
+    text-transform: uppercase;
+}
+.active{
+
+
+}
+.list--pagination__element, .list--social__element {
+    font-weight: 600;
+    line-height: 1;
+    font-size: .875em;
+    letter-spacing: .1875em;
+    text-transform: uppercase;
+}
+
+.hidden
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.hidden:before
+{
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+	z-index: -1;
+	background: url(../images/writing_2.jpg) 0 0 repeat;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+#pagination__hero, #project__social, #project__url, .list--pagination, .list--social {
+    text-align: center;
+}
+.active{
+
+	text-decoration: line-through;
+}
+.project-title{
+
+	z-index: 2;
+}
+.path{
+
+	stroke-dasharray: 1981;stroke-dashoffset: 0;
+}
+.path_anime{animation: dash 1s linear;animation-iteration-count: 1;}
+
+@media (min-width: 576px) { 
+
+li{
+
+	display: block;
+}
+
+.col-md-9{
+
+	width: 100%;
+}
+
+}

@@ -1,0 +1,149 @@
+body{
+}
+
+
+
+@-webkit-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes AnimationName {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes AnimationName { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+.path:hover {
+  stroke-dasharray: 1981;
+  stroke-dashoffset: 1981;
+  animation: dash 5s linear alternate infinite;
+}
+@keyframes dash {
+ 
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.container{
+
+	width: 80%;
+	margin: 0 auto;
+}
+
+.col-md-9{
+
+	padding: 20%;
+	position: relative;
+}
+.col-md-9 .project, .path{
+
+  width: auto;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.col-md-9 .path{
+  left: auto;
+}
+.col-md-9{
+	background: url('../images/writing_2.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.core--landing #pagination {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    z-index: 3;
+}
+.container ul {
+
+	list-style-type: none;
+	display: inline-block;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+@media (min-width: 20em)
+.list--pagination__element {
+    display: block;
+    margin-top: 1.25em;
+}
+.list--pagination__element {
+    font-family: avenirnext-demibold,Helvetica,sans-serif;
+    color: #02010a;
+    margin: 0;
+    padding: 0 1.25em;
+    display: inline-block;
+    cursor: pointer;
+}
+.row li {
+    font-family: avenirnext-demibold,Helvetica,sans-serif;
+    color: #02010a;
+    margin: 0;
+    padding: 0 1.25em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.row {
+ margin: 10%;
+ padding: 20;
+}
+.row ul {
+ margin: auto;
+
+}
+.row li a{
+    font-weight: 600;
+    line-height: 1;
+    font-size: .875em;
+    letter-spacing: .1875em;
+    text-transform: uppercase;
+}
+.active{
+
+
+}
+.list--pagination__element, .list--social__element {
+    font-weight: 600;
+    line-height: 1;
+    font-size: .875em;
+    letter-spacing: .1875em;
+    text-transform: uppercase;
+}
+
+.hidden
+{
+	position: relative;
+	overflow: hidden;
+}
+
+.hidden:before
+{
+	content: "";
+	position: absolute;
+	width: 200%;
+	height: 200%;
+	top: -50%;
+	left: -50%;
+	z-index: -1;
+	background: url(../images/writing_2.jpg) 0 0 repeat;
+	-webkit-transform: rotate(90deg);
+	-moz-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}

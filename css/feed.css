@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand');
+*{
+	font-family: 'Quicksand', sans-serif;
+}
+body{
+
+	background-color: #20203d;
+	animation: dash 1s ease infinite;
+}
+.container{
+	border-radius: 4%;
+	margin-top: 20px;
+	padding: 20px;
+
+}
+.container h3{
+	color: #fff;
+	text-align: center;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.trans--grow{
+  -webkit-transition: width 1s ease-out; /* For Safari 3.1 to 6.0 */
+  transition: width 1s  ease-out;
+  width : 0%;
+}
+.grow{
+  width:50%;
+}
+.hr1{
+  margin-left:0;
+}
+.hr2{
+  margin-right:0;
+}
+hr{
+  margin-top: 20px;
+  padding: 2px 0;
+  border: none;
+  background-color: #fff;
+  letter-spacing: 5px;
+}
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: dash 5s linear alternate infinite;
+}
+.path:hover {
+ fill: #fff;
+ stroke: 90px;
+ transition: all 1s;
+ cursor: pointer;
+ animation: dash 5s linear alternate infinite;
+}
+.path:hover + .path2{
+	transform: matrix(1.56465 0 0 1.56465 -134.719 -134.719);
+}
+
+@keyframes dash {
+ 0% {
+		background-position: 50% 100%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+.content{
+	border-radius: 2%;
+	margin-top: 20px;
+	padding: 20px;
+	/*background: url('../images/wall.jpeg');*/
+	background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.card img{
+	width: 100%;
+}
+
+
+.btn-animated{
+
+	border-radius: 20%;
+	padding: 10px;
+	padding-left: 20px;
+	padding-right: 20px;
+	text-decoration: none;
+	background-color: #031F32;
+	border: 1px solid #031F32;
+	color: #fff;
+}
+
+
+
+.btn-animated:hover {
+
+    color: #031F32;
+    text-decoration: none;
+    background-color: #fff;
+    transform-origin: 0 50%;
+	transition : all 1s;
+
+}

@@ -1,68 +1,68 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>BlockchainDemo</title>
-	<!-- CSS files for the creative Tim project  -->
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
-	 <link href="assets/css/bootstrap.min.css" rel="stylesheet" />
-    <link href="assets/css/material-kit.css" rel="stylesheet"/>
-    <link rel="stylesheet" type="text/css" href="style.css">
-	<!-- Javascript filr for the sha256 libary-->
-	<script type="text/javascript" src="sha256.js"></script>
+	<title>Rectangleanimation</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" style="text/css" href="css/hover.css">
+	<link rel="stylesheet" style="text/css" href="main.css">
 </head>
 <body>
-	<div class="card card-nav-tabs card-plain">
-		<div class="header header-danger">
-			<!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
-			<div class="nav-tabs-navigation">
-				<div class="nav-tabs-wrapper">
-					<ul id="user_add_box" class="nav nav-tabs" data-tabs="tabs">
-						<li class="active"><a href="#home" data-toggle="tab">Sato</a><button class="connect" id="connect1" onclick="synchChain(event)"></button></li>
-						<li style="float: right;"><button id="add_user" class="btn btn-info" style="float: right; border-radius: 15px;">Add user</button></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<h2 class="center">Blockchain</h2>
-		<p class="center">Click on the blue button beside the users to synch their blockchain</p>
-		<div class="content">
-			<div class="tab-content" id="content_append">
-				<div class="tab-pane active" id="home">
-					<div class="card card-signup" style="width: 100%;">
-							<div class="input-group">
-								<input type="text" class="control" placeholder="data">
-							</div>
-							<div class="hash" style="display: inline-flex;"><p>Hash : </p><p>dc75a315c77a1f9c98fb6247d03dd18ac52632d7dc6a9920261d8109b37cf00</p></div>	
-							<div></div>
-							<div class="hash" style="display: inline-flex;"><p>PreviousHash : </p><p>0</p></div>
-					</div>
-					<div id="main_container">
-					
-					</div>
-					<div class="adds card card-signup">
-							<div class="input-group">
-								<input type="text" id="input_data1" class="control_f" placeholder="Add data">
-							</div>
-						<div class="footer text-center">
-							<button id ="1" class="btn btn-danger" onclick="isClicked(event)" style="background: linear-gradient(45deg,#d4145a,#fbb03b); padding: 20px; padding-left: 20px; padding-right: 20px; border-radius: 15px;">Add data</button>
-						</div>
-					
-					</div>
-				</div>
-			</div>
-		</div>
+	<style>
+	.button:hover{
+		cursor: pointer;
+
+	}
+	</style>
+	<aside class="intro__boxes">
+		<svg class="animate" style="width: 90%; height: 90%;">
+			<defs>
+		        <linearGradient id="MyGradient">
+		          <stop offset="50%" stop-color="#18f2e0" />  
+		          <stop offset="60%" stop-color="#183df2" />
+		        </linearGradient>
+      		</defs>
+			<g class= "transform1">
+				<path style="fill:url(#MyGradient);stroke-width=2;" d="M327.349-341.426L669.94-14.974L343.58,327.52L0.99,1.068L327.349-341.426 M327.323-342.486
+					L-0.071,1.094L343.606,328.58L671-15L327.323-342.486L327.323-342.486z"/>
+			</g>
+			<g class= "transform2">
+				<path style="fill:#29ABE2;" d="M337.26-472.143l470.694,336.317L471.67,334.822L0.976-1.495L337.26-472.143 M337.086-473.189
+					L-0.07-1.321l471.914,337.189L809-136L337.086-473.189L337.086-473.189z"/>
+			</g>
+			<g class= "transform3">
+				<path style="fill:#29ABE2;" d="M382.64-481.934L958.946-25.877L577.594,456.029L1.287-0.028L382.64-481.934 M382.517-482.987
+					L0.233,0.095l577.483,456.987L960-26L382.517-482.987L382.517-482.987z"/>
+			</g>
+			<g class= "transform4">
+				<path style="fill:#29ABE2;" d="M203.853-327.522l309.115,190.766L311.679,189.41L2.564-1.356L203.853-327.522 M203.609-328.554
+					L1.532-1.112l310.391,191.554L514-137L203.609-328.554L203.609-328.554z"/>
+			</g>
+			<g class= "transform5">
+				<path style="fill:url(#MyGradient);" d="M514.843-602.115l662.1,566.198L663.529,564.457L1.429-1.74L514.843-602.115 M514.76-603.173
+					L0.372-1.658l663.24,567.172L1178-36L514.76-603.173L514.76-603.173z"/>
+			</g>
+			<g class= "transform6">
+				<path style="fill:#29ABE2;" d="M368.036-19.342l19.841,350.94L20.964,352.342L1.122,1.402L368.036-19.342 M368.743-20.133
+					L0.331,0.696l19.926,352.437l368.412-20.829L368.743-20.133L368.743-20.133z"/>
+			</g>
+			
+			<g class= "transform7">
+				<path style="fill:url(#MyGradient);" d="M520.25,0.75v452.5H0.75V0.75H520.25 M521,0H0v454h521V0L521,0z"/>
+			</g>
+		</svg>
+	</aside>
+	<div class="click">
+		<p>Welcome in my world</p>
+		<a href="navigation.html" class="more">More</a>
 	</div>
-	<div class="spinning">
-		<hr class="line">
-		<hr class="line_1">
-	</div>
-	<!-- Javascript files-->
-	<script src="assets/js/jquery.min.js" type="text/javascript"></script>
-	<script src="assets/js/bootstrap.min.js" type="text/javascript"></script>
-	<script src="assets/js/material.min.js"></script>
-	<!-- Javascript blockchain file-->
-	<script type="text/javascript" src="Blockchain.js"></script>
 </body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+jQuery(document).ready(function($){
+    setTimeout(function(){
+         $('.click').addClass('click_visible');
+    }, 1500);
+});
+</script>
 </html>
+
