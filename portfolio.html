@@ -1,0 +1,771 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+    crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Unicase" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Waiting+for+the+Sunrise" rel="stylesheet" type="text/css"/>
+
+    <title>Portfolio</title>
+    
+  <style type="text/css">
+
+  body{
+
+    font-family: 'Cormorant Unicase', serif;
+    background-color: white;
+    overflow-x: hidden; 
+  }
+
+  .header {
+    margin:0;
+    padding: 0;
+    position: relative;
+    min-height: 550px;
+    overflow: hidden;
+    background: #CB356B;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #BD3F32, #CB356B);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #BD3F32, #CB356B); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+
+	}
+
+	svg {
+	  position: absolute;
+	  bottom: 0;
+	  width: 100%;
+	  height: 200px;
+	}
+
+	@media (max-width: 699px) {
+	  .svg--lg {
+	    display: none;
+	  }
+	  .header {
+	    min-height: 250px;
+	    -webkit-clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+	    clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%);
+	}
+
+	}
+	@media (min-width: 700px) {
+	  .svg--sm {
+	    display: none;
+	  }
+	}
+
+	.grid {
+	   display: grid;
+	   grid-gap: 10px;
+	   grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+	   grid-auto-rows: 200px;
+	}
+
+	.photo {
+	   grid-row-end: span 2;
+	}
+	.project {
+	   grid-row-end: span 3;
+	}
+	.blog {
+	   grid-row-end: span 1;
+	}
+
+	/* Non-grid specific CSS */  
+
+	.item {
+	  background-color: #ffffff;
+	}
+
+	.photothumb{
+	  width: 100%;
+	}
+
+	.title {
+	  padding: 20px;
+	 }
+
+	.title h3{
+	  font-size: 1.2em;
+	  color: #ffffff;
+	  text-transform: uppercase;
+	}
+
+	.project .title{
+	  background-color: #607D8B;
+	}
+
+	.blog .title{
+	  background-color: #ff9800;
+	}
+
+	.photo .title{
+	  background-color: #f44336;
+	}
+
+	.desc{
+	  padding: 10px 10px 5px 10px;
+	}
+
+	.desc img{
+	  width: 50%;
+	  margin: 0 10px 10px 0;
+	  float: left;
+	}
+
+	.desc p{
+	  margin-bottom: 10px;
+	}
+	#graph div {
+	    position:relative;
+	    margin:80px;
+	    width:160px; height:160px;
+	}
+	#graph canvas {
+	    display: block;
+	    position:relative;
+	    top:0;
+	    left:0;
+	}
+	#graph span {
+	    color:rgb(245,222,179);
+	    position: absolute;
+	    display:block;
+	    line-height:220px;
+	    text-align:center;
+	    width:220px;
+	    font-family:sans-serif;
+	    font-size:40px;
+	    font-weight:100;
+	    margin-left:5px;
+	}
+
+	#graph input {
+	    width: 160px;
+	}
+
+	section {
+	    padding: 60px 0;
+	}
+
+	section .section-title {
+	    text-align: center;
+	    color: #007b5e;
+	    margin-bottom: 50px;
+	    text-transform: uppercase;
+	}
+	.nav-fill .nav-item {
+	    color: #333!important;
+	}
+	#tabs{
+	  background: #007b5e;
+	    color: #eee;
+	}
+	#tabs h6.section-title{
+	    color: #eee;
+	}
+
+	#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active {
+	    color: #333;
+	    background-color: transparent;
+	    border-color: transparent transparent #f3f3f3;
+	    border-bottom: 4px solid !important;
+	    font-size: 20px;
+	    font-weight: bold;
+	}
+	#tabs .nav-tabs .nav-link {
+	    border: 1px solid transparent;
+	    border-top-left-radius: .25rem;
+	    border-top-right-radius: .25rem;
+	    color: #eee;
+	    font-size: 20px;
+	}
+	nav{
+
+	  margin: 0 auto;
+	}
+	.nav-fill .nav-item {
+	    color: #333!important;
+	}
+	.triangle {
+	  clip-path: polygon(
+	    0 0,
+	    100% 0,
+	    100% 100%,
+	    0 calc(100% - 6vw)
+	  );
+	  position: absolute;
+	  right:0;
+	  left: 0;
+	}
+	#tabs .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
+	    border-bottom: 4px solid #008075!important;
+	}
+
+	.slanted{
+	  margin-top: 5px;
+	  position: relative;
+	  width: 100%;
+	  min-height: 350px;
+	  background: rgb(0,128,129);
+	  padding: 30px;
+
+	}
+
+	.slanted:after{
+	  content: '';
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background: inherit;
+	  transform-origin: top right;
+	  transform: skewY(5deg);
+
+	}
+	.slant{
+	  margin-top: 5px;
+	  position: relative;
+	  width: 100%;
+	  min-height: 350px;
+	  background: #007bff;
+	  padding: 30px;
+
+	}
+
+	.slant:after{
+	  content: '';
+	  top: 0;
+	  left: 0;
+	  right: 0;
+	  bottom: 0;
+	  position: absolute;
+	  width: 100%;
+	  height: 100%;
+	  background: inherit;
+	  transform-origin: top right;
+	  transform: skewY(5deg);
+
+	}
+	@keyframes slideInFromLeft {
+	  0% {
+	    transform: translateX(-100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}
+	@keyframes slideInFromRight {
+	  0% {
+	    transform: translateX(100%);
+	  }
+	  100% {
+	    transform: translateX(0);
+	  }
+	}
+	.col-md-6 svg {  
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  /* This section calls the slideInFromLeft animation we defined above */
+	  animation: 1s ease-out 0s 1 slideInFromLeft;
+	}
+	#slant svg {  
+	  width: 100%;
+	  position: absolute;
+	  top: 0;
+	  right: 0;
+	  left: 0;
+	  /* This section calls the slideInFromLeft animation we defined above */
+	  animation: 1s ease-out 0s 1 slideInFromRight;
+	}
+	.col-md-6 h3 {  
+	  z-index: 9;
+	  position: absolute;
+	  color: white;
+	  /* This section calls the slideInFromLeft animation we defined above */
+	  animation: 1s ease-out 0s 1 slideInFromRight;
+	}
+   .flex { 
+	    display: -webkit-flex;
+	    display: flex; 
+	    -webkit-flex-direction: row; 
+	    flex-direction: row; 
+	    -webkit-justify-content: flex-start; 
+	    justify-content: flex-start;
+        }
+
+    .slider-wrapper div 
+        {
+          position: relative;
+        
+        }
+    .slider-wrapper
+        {
+         margin-top: 5vw; 
+         margin-left: 11vw;
+        
+        }
+          
+    .slide-image 
+        {
+         height: 24vw;
+        }
+        
+        
+    .slide-image img 
+        {
+        width: 24vw;
+        cursor: pointer;
+        }
+         
+    .slide-content 
+        { 
+        color: #333; 
+        padding:3vw 18vw 3vw 9vw;}
+        
+        
+    .slide-date
+        {   color: #0a8acb;
+            font-size: 1.1vw;
+            font-weight: 400; 
+            letter-spacing: 0.1vw;
+            padding-bottom: 1.4vw;
+        }
+        
+        
+    .slide-title
+        {
+        font-size: 1.2vw; 
+        font-weight: 400;
+        letter-spacing: 0.1vw; 
+        line-height: 1.55vw; 
+        padding-bottom: 1.8vw;
+        }
+        
+    .slide-text 
+        {
+        font-size: 0.80vw;
+        line-height: 1.2vw; 
+        opacity: 0.8; 
+        padding-bottom: 4vw;
+        }
+        
+        
+    .slide-more
+        {
+        font-weight: 400; 
+        letter-spacing: 0.1vw;
+        float: left; 
+        font-size: 0.9vw;
+        }
+          
+    .slide-bullet 
+        {
+    	width: 0.5vw; 
+        height: 0.5vw; 
+        background-color: #0b8bcc;
+        border-radius: 200%; 
+        position: relative; 
+        margin-left: 1.2vw;
+        }
+    .slide-nav {
+        margin-left: 64vw;
+        margin-top: -5.5vw;
+    }
+
+    div.overlay-blue 
+        {width: 100%; 
+            height: 100%; 
+            position: absolute; 
+            top: 0;
+            bottom: 0;
+            transition: 0.5s ease all;
+        }
+    div.overlay-blue:hover 
+        {background-color: rgba(13, 27, 43, 0.5);}
+
+    .arrows
+        {
+    	width: 3.5vw; 
+        margin-top: -5.8vw;
+        margin-left: 72vw; 
+        position: relative;
+        }
+ 
+    .arrow 
+        {
+    	display: inline-block;
+        position: absolute;
+        width: 1.2vw; 
+        height: 1.2vw; 
+        background: transparent;
+        text-indent: -9999px; 
+        border-top: 0.15vw solid #333;
+        border-left: 0.15vw solid #333; 
+        transition: all .1s ease-in-out; 
+        text-decoration: none; 
+        color: #333;
+    }
+            
+    .arrow:hover 
+        {
+    	border-color: #0A8ACB; 
+        border-width: 0.25vw;
+    	}
+    .arrow:before 
+        {
+    	display: block;
+        height: 200%; 
+        width: 200%; 
+        margin-left: -50%; 
+        margin-top: -50%; 
+        content: ""; 
+        transform: rotate(45deg);
+        }
+    .arrow.prev {transform: rotate(-45deg); left: 0;}
+    .arrow.next {transform: rotate(135deg); right: 0;}
+    .backend{
+    	background-image: url("backend.jpg");
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	min-height: 100px;
+    	z-index: 30;
+    }
+    .frontend{
+    	background-image: url("front.png");
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	min-height: 100px;
+    	z-index: 30;
+    }
+    .ui{
+		background-image: url("ui.png");
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: center;
+		min-height: 100px;
+		z-index: 30;
+    	}
+  </style>
+</head>
+  <body onload="typewriter();">
+ 	<div class="container-fluid header">
+    <!--<div class="row" style="position: relative;">
+        <div class="chart" id="graph" data-percent="1" style="float: none; margin: 0 auto;"></div>
+    </div>-->
+  		<div class="row" style="margin: 0 auto; padding-top: 40px;">
+   			 <div class="overlay" style="position: absolute; right: 0 left: 0; top: 0; width: 100%; height: 600px; overflow: hidden; display: block;"><div class="row"><img src="profile.png" style="border-radius: 100%; width: 20%; height: 30%; margin: 0 auto;"></div><div class="row" style="text-align: center;"><h3 id= "typedtext" style="color: black; margin: 0 auto; color: white;"></h3></div></div>
+  		</div>
+	  	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none">
+	  		<polygon class="svg--lg" fill="white" points="0,0 35,101 62,20 85,90 100,50 100,80 100,100 0,100"></polygon>
+	  	</svg>
+
+	</div>
+	<div class="container-fluid">
+	   <div class="row" style="margin: 0 auto; padding-top: 40px">
+	    <nav>
+	      <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+	        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Works</a>
+	        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+	      </div>
+	    </nav>
+	  </div>
+	</div>
+	<div class="tab-content py-3 px-3 px-sm-0" id="nav-tabContent">
+	    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+		<div class="slider">
+			<div class="slider-wrapper flex">
+				<div class="slide flex">
+					<div class="slide-image slider-link prev"><img src="a.png"><div class="overlay"><div id="particles-js" style="position: absolute;right: 0; left: 0; top: 0;width: 100%;"></div></div></div>
+					<div class="slide-content">
+						<div class="slide-date">18:01:2018.</div>
+						<div class="slide-title">Blockchain</div>
+						<div class="slide-text">Check out my little blockchain implementation on github</div>
+						<div class="slide-more"><a href="https://github.com/AngieHM/blockchain.github.io">READ MORE</a></div>
+					</div>	
+				</div>
+				<div class="slide flex">
+					<div class="slide-image slider-link next"><img src="b.png"><div class="overlay" style="background-image: url(face.png);background-size: cover;background-repeat: no-repeat,no-repeat,no-repeat;background-position: center, center, right top;"></div></div>
+					<div class="slide-content">
+						<div class="slide-date">12:12:2017</div>
+						<div class="slide-title">Front end and back end face recognition</div>
+						<div class="slide-text">Check out my React face recognition implementation</div>
+						<div class="slide-more"><a href="https://github.com/AngieHM/React_face_recognition_app">READ MORE</a></div>
+					</div>	
+				</div>	
+				<div class="slide flex">
+					<div class="slide-image slider-link next"><img src="c.png"><div class="overlay" style="background-image: url(more.png); background-size: contain;background-repeat: no-repeat; background-position: center; "></div></div>
+					<div class="slide-content">
+						<div class="slide-date">12:03:2018</div>
+						<div class="slide-title">Others</div>
+						<div class="slide-text">Check out other piece of codes that I wrote</div>
+						<div class="slide-more"><a href="https://github.com/AngieHM/">READ MORE</a></div>
+					</div>	
+				</div>
+				<div class="slide flex">
+					<div class="slide-image slider-link next"><img src="c.png"><div class="overlay" style="background-image: url(see.png); background-size: contain;background-repeat: no-repeat; background-position: center; "></div></div>
+					<div class="slide-content">
+						<div class="slide-date">30.10.2017.</div>
+						<div class="slide-title">LOREM IPSUM DOLOR SITE MATE, AD EST ABHORREANT</div>
+						<div class="slide-text">Lorem ipsum dolor sit amet, ad est abhorreant efficiantur, vero oporteat apeirian in vel. Et appareat electram appellantur est. Ei nec duis invenire. Cu mel ipsum laoreet, per rebum omittam ex. </div>
+						<div class="slide-more">READ MORE</div>
+					</div>	
+				</div>
+			</div>
+			<div class="arrows">
+			<a href="#" title="Previous" class="arrow slider-link prev"></a>
+			<a href="#" title="Next" class="arrow slider-link next"></a>
+			</div>
+		</div>
+    </div>
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+   
+    </div>
+    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+		<p style="text-align: center;">Do you like what you see? Do not hesitate to contact me via my email jonna.missero@gmail.com</p>
+  	</div>
+  <div class="tab-pane fade" id="nav-contact-s"></div>
+
+  <div class="container-fluid slanted" id = "slanted" style="margin-top: 10%;">
+    <div class="row" style="min-height: 280px;">
+        <div class="col-md-6 backend">
+        </div>
+        <div class="col-md-6"><h3 style="">Back end developement</h3>
+        </div>
+    </div>
+    <div class="row" style="min-height: 200px;">
+    	<p style="z-index: 30; margin: 0 auto; color: #fff">I do not only make sure that you have what you want, I make sure you have what you want and what you need. I put hard work but most importantly in every piece of work I do. For me delivering above your expectations is my number I priority</p></div>
+  </div>
+
+   <div class="container-fluid slanted" id = "ui" style="background: white;">
+     <div class="row" style="min-height: 200px;">
+        <div class="col-md-6 ui">
+         
+        </div>
+        <div class="col-md-6"><h3 style="color: #333;">UI design</h3>
+        </div>
+
+    </div>
+    <div class="row">
+    	<p style="z-index: 30; margin: 0 auto; color: #333;min-height: 200px">Every piece of design is throughtly thought of. I make sure that you end up with an end product that looks good, speaks for itself but most importantly represents your brand and everything you stand for.</p></div>
+  </div>
+
+
+   <div class="container-fluid slant" id = "front" style="background: #008075;">
+    <div class="row" style="min-height: 300px;">
+        <div class="col-md-6 frontend">
+         
+        </div>
+        <div class="col-md-6"><h3 style="">Front end developement</h3></div>
+    </div>
+    <div class="row"><p style="z-index: 30; margin: 0 auto; color:#fff;">No detail is left unthought of. Everything is aligned with style and good practice coding. At the end of the day wether back end or front end, the result is beautiful inside and out.</p></div>
+  </div>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="TweenMax.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+  integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+  crossorigin="anonymous">
+  </script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+  integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+  crossorigin="anonymous">
+</script>
+<script src="../particles.js"></script>
+<script src="js/app.js"></script>
+<script>
+var ids = [];
+var count_particles, stats, update;
+stats = new Stats;
+stats.setMode(0);
+stats.domElement.style.position = 'absolute';
+stats.domElement.style.left = '0px';
+stats.domElement.style.top = '0px';
+document.body.appendChild(stats.domElement);
+count_particles = document.querySelector('.js-count-particles');
+update = function() {
+  stats.begin();
+  stats.end();
+  if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) {
+    count_particles.innerText = window.pJSDom[0].pJS.particles.array.length;
+  }
+  requestAnimationFrame(update);
+};
+requestAnimationFrame(update);
+</script>
+<script>  
+( function($) {
+
+$(document).ready(function() {
+
+var s           = $('.slider'),
+    sWrapper    = s.find('.slider-wrapper'),
+    sItem       = s.find('.slide'),
+    btn         = s.find('.slider-link'),
+    sWidth      = sItem.width(),
+    sCount      = sItem.length,
+    slide_date  = s.find('.slide-date'),
+    slide_title = s.find('.slide-title'),
+    slide_text  = s.find('.slide-text'),
+    slide_more  = s.find('.slide-more'),
+    slide_image = s.find('.slide-image img'),
+    sTotalWidth = sCount * sWidth;
+
+sWrapper.css('width', sTotalWidth);
+sWrapper.css('width', sTotalWidth);
+
+var clickCount  = 0;
+
+btn.on('click', function(e) {
+  e.preventDefault();
+
+  if( $(this).hasClass('next') ) {
+    
+    ( clickCount < ( sCount - 1 ) ) ? clickCount++ : clickCount = 0;
+  } else if ( $(this).hasClass('prev') ) {
+    
+    ( clickCount > 0 ) ? clickCount-- : ( clickCount = sCount - 1 );
+  }
+  TweenMax.to(sWrapper, 0.4, {x: '-' + ( sWidth * clickCount ) })
+
+
+  //CONTENT ANIMATIONS
+
+  var fromProperties = {autoAlpha:0, x:'-50', y:'-10'};
+  var toProperties = {autoAlpha:0.8, x:'0', y:'0'};
+
+  TweenLite.fromTo(slide_image, 1, {autoAlpha:0, y:'40'}, {autoAlpha:1, y:'0'});
+  TweenLite.fromTo(slide_date, 0.4, fromProperties, toProperties);
+  TweenLite.fromTo(slide_title, 0.6, fromProperties, toProperties);
+  TweenLite.fromTo(slide_text, 0.8, fromProperties, toProperties);
+  TweenLite.fromTo(slide_more, 1, fromProperties, toProperties);
+
+});
+      
+});
+})(jQuery);
+
+$('.overlay').addClass('overlay-blue');
+
+</script>
+<script>
+var el = document.getElementById('graph'); // get canvas
+var percentS = el.getAttribute('data-percent');
+  var options = {
+  percent:  parseInt(percentS) || 25,
+  size: el.getAttribute('data-size') || 220,
+  lineWidth: el.getAttribute('data-line') || 15,
+  rotate: el.getAttribute('data-rotate') || 0
+}
+
+var canvas = document.createElement('canvas');
+var span = document.createElement('span');
+var ctx = canvas.getContext('2d');
+var radius = (options.size - options.lineWidth) / 2;
+window.onload = initializeCanvas;
+function initializeCanvas(){
+
+
+span.textContent = options.percent + '%';
+  
+if (typeof(G_vmlCanvasManager) !== 'undefined') {
+  G_vmlCanvasManager.initElement(canvas);
+}
+
+canvas.width = canvas.height = options.size;
+
+el.appendChild(span);
+el.appendChild(canvas);
+
+ctx.translate(options.size / 2, options.size / 2); // change center
+ctx.rotate((-1 / 2 + options.rotate / 180) * Math.PI); // rotate -90 deg
+
+//imd = ctx.getImageData(0, 0, 240, 240);
+drawCircle('#efefef', options.lineWidth, 100 / 100);
+drawCircle('#555555', options.lineWidth, options.percent / 100);
+}
+
+var drawCircle = function(color, lineWidth, percent) {
+  percent = Math.min(Math.max(0, percent || 1), 1);
+  ctx.beginPath();
+  ctx.arc(0, 0, radius, 0, Math.PI * 2 * percent, false);
+  ctx.strokeStyle = color;
+      ctx.lineCap = 'round'; // butt, round or square
+  ctx.lineWidth = lineWidth
+  ctx.stroke();
+};
+
+function drawPercent(id){
+
+if(options.percent > 100) {
+   //clearInterval(handle);
+   return;  
+}
+if (ids.includes(id)){
+}
+else{
+    options.percent+=33;
+    ids.push(id)
+    drawCircle('#555555', options.lineWidth, options.percent / 100);
+    span.textContent = options.percent + '%';
+}
+}
+</script>
+<script>
+var aText = new Array(
+"Hello World;",
+"You want a good website huh?;",
+"Why a good website? Let's make it awesome;",
+);
+var iSpeed = 1000; // time delay of print out
+var iIndex = 0; // start printing array at this posision
+var iArrLength = aText[0].length; // the length of the text array
+var iScrollAt = 20; // start scrolling up at this many lines
+ 
+var iTextPos = 0; // initialise text position
+var sContents = ''; // initialise contents variable
+var iRow; // initialise current row
+ 
+function typewriter()
+{
+ sContents =  ' ';
+ iRow = Math.max(0, iIndex-iScrollAt);
+ var destination = document.getElementById("typedtext");
+ 
+ while ( iRow < iIndex ) {
+  sContents += aText[iRow++] + '<br />';
+ }
+ destination.innerHTML = sContents + aText[iIndex].substring(0, iTextPos) + "_";
+ if ( iTextPos++ == iArrLength ) {
+  iTextPos = 0;
+  iIndex++;
+  if ( iIndex != aText.length ) {
+   iArrLength = aText[iIndex].length;
+   setTimeout("typewriter()", 500);
+  }
+ } else {
+  setTimeout("typewriter()", iSpeed);
+ }
+}
+typewriter();
+</script>
+</body>
+</html>
